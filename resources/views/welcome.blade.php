@@ -35,7 +35,7 @@
                     center:'title',
                     right:'month,agendaWeek,agendaDay'
                 },
-                events:'/full-calendar',
+                events:'/calendar',
                 select:function(start, end, allDay) {
                     var title = prompt("Titre de l'évènement");
                     if(title){
@@ -60,7 +60,6 @@
                     }
                 }
             });
-
         })
     </script>
 </body>

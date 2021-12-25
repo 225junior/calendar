@@ -10,10 +10,9 @@ class FullCalendarController extends Controller
     public function index(Request $request){
 
         if ($request->ajax()) {
-
             $data = Events::whereDate('start','>=', $request->start)
                     ->whereDate('end','<=', $request->end)
-                    ->get();
+                    ->get(['id','title','start','end']);
 
             return response()->json($data);
         }
